@@ -93,28 +93,7 @@ body {
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
 <link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
 <style>html,body{background:#0f0d12}#status{font-family:system-ui,'Microsoft YaHei',sans-serif}#rip-tip{margin-top:14px;font:14px/1.7 system-ui,'Microsoft YaHei',sans-serif;color:#cfc6b8;text-align:center;max-width:560px;padding:0 16px;pointer-events:none}</style><script>document.addEventListener('DOMContentLoaded',function(){document.title='棺不住 · Rest in Pieces';var s=document.getElementById('status');if(!s||document.getElementById('rip-tip'))return;var d=document.createElement('div');d.id='rip-tip';d.textContent='《棺不住》网页版首次加载约 1-2 分钟（约 109 MB），加载完点一下画面即可开始；按 1 一个人抬 / 2 两个人抬';s.appendChild(d);})</script>
-	
-<style id="rip-gesture-guard">
-html, body { overscroll-behavior: none; touch-action: none; overflow: hidden;
-  user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
-#canvas { touch-action: none; }
-</style>
-<script id="rip-gesture-guard-js">
-(function () {
-  // 拖动、选中、右键菜单：按住左右键拖动时浏览器会抢事件，必须挡掉
-  ["dragstart", "selectstart", "contextmenu"].forEach(function (t) {
-    document.addEventListener(t, function (e) { e.preventDefault(); }, true);
-  });
-  // 触控板/鼠标"后退"手势：把历史记录顶住，滑走也会被拉回来
-  try {
-    history.pushState(null, "", location.href);
-    window.addEventListener("popstate", function () {
-      history.pushState(null, "", location.href);
-    });
-  } catch (e) {}
-})();
-</script>
-</head>
+	</head>
 	<body>
 		<canvas id="canvas">
 			Your browser does not support the canvas tag.
@@ -132,7 +111,7 @@ html, body { overscroll-behavior: none; touch-action: none; overflow: hidden;
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":84134012,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":16878668,"index.wasm":39514754},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
